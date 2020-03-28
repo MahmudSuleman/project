@@ -1,0 +1,24 @@
+.form-div{
+  height: 80vh;
+  width: 80%;
+  margin:60px auto;
+//  border: 1px solid green;
+  font-size: 1.6rem;
+  padding: 2rem;
+//  text-align: center;
+  & .form-control{
+    line-height: 2rem;
+    font-size: 1.6rem;
+  }
+  &__header{
+    background-color: rgba(0,0,0,0.5);
+    padding: 1rem;
+    border-radius: 1rem 1rem 0 0;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+
+

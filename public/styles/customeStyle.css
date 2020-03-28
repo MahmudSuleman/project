@@ -1,0 +1,209 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    font-family: "Courier New", monospace;
+}
+
+body{
+    padding: 62.5%;
+}
+
+
+.heading{
+    height: 15vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+
+}
+
+.logo__box{
+    float: left;
+    margin: 20px;
+    border: 1px solid white;
+    /*padding: 10px;*/
+
+}
+
+.logo__box--text{
+    text-align: center;
+    text-transform: uppercase;
+    color:white;
+    padding: 5px;
+}
+
+/*.logo__box*/
+
+.search{
+    float: right;
+    margin-top: 10px;
+}
+
+
+/*.logo-box{*/
+    /*top: 5px;*/
+    /*left:10px ;*/
+    /*position: absolute;*/
+    /*background-color: #fef9ff;*/
+    /*border-radius: 20%;*/
+    /*padding: 10px;*/
+/*}*/
+
+/*.logo-extract{*/
+    /*color: black;*/
+/*}*/
+
+
+
+/*#menu-item{*/
+    /*background-color: #fef9ff;*/
+/*}*/
+
+
+#menu-item ul{
+    text-align: center;
+    list-style-type: none;
+    height: 50px;
+}
+
+#menu-item ul li a{
+    text-decoration: none;
+    position: absolute;
+    border: 1px solid #000000;
+    padding: 5px;
+    border-radius: 5px;
+    color: #000000;
+    top: 10px;
+
+
+}
+
+#menu-item ul li a:hover   {
+    border: 1px solid red;
+    background-color: firebrick;
+}
+
+/*homepage*/
+#tabs-table {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+
+}
+#tabs-table tr td{
+    display: inline-block;
+    /*border: 1px solid black;*/
+    /*border-radius: 10px;*/
+    width: 30%;
+    height: 100px;
+}
+
+
+
+#tabs-table tr td a{
+    display: inline-block;
+    box-sizing: border-box;
+    height: 80%;
+    width: 80%;
+    text-decoration: none;
+    background-color:green;
+    color: white;
+    font-family: "Courier New", monospace;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 10px rgba(0,0,0,0.5);
+    outline: hidden;
+
+}
+
+#tabs-table tr td a:hover{
+    color: white;
+    box-shadow: 0 2px rgba(0,0,0,0.5);
+    transform: translateY(5px);
+    /*background-color: dodgerblue;*/
+
+}
+
+.table-div{
+    padding: 50px;
+}
+
+
+/*general styling*/
+#main-content{
+    background-color:#fff;
+    height:100%;
+    width:100%  !Important;
+    border: 1px groove #e5e5e5;
+    /*height: 500px;*/
+    min-height:500px;
+    padding:5px;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.065);
+    font-size:1.2em;
+    margin:auto;
+    clear: both;
+    /*overflow-x: auto;*/
+}
+
+#header-banner{
+    height: 50px;
+    background-color: black;
+    border-bottom: 3px solid red;
+}
+
+
+
+
+body{
+    background-color: #cccccc;
+}
+
+
+footer{
+    position: relative;
+    bottom: 0;
+    background-color: #1d2124;
+    width: 100%;
+    /*margin: auto;*/
+    /*clear: both;*/
+    color: #ffffff;
+    text-align: center;
+
+}
+
+
+/*reset password*/
+
+.reset-password-form-div{
+    width: 50%;
+    margin: 10px auto;
+}
+
+table{
+    width:100%;
+    font-size: 20px;
+
+}
+
+.register-course-table{
+    width: 100%;
+}
+
+.register-course-table tr:nth-child(even) {
+    background-color: #cccccc;
+}
+
+#login-left
+{
+    /*max-height: 500px;*/
+    height: 400px;
+    background-color: #cfd2d6;
+}
+
+.table-div{
+    height: 400px;
+    overflow: scroll;
+}

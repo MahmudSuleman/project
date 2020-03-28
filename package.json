@@ -1,0 +1,20 @@
+{
+  "name": "timetable",
+  "version": "1.0.0",
+  "description": "\"website for extration of timetable\"",
+  "main": "index.js",
+  "scripts": {
+    "compile": "node-sass public/styles/sass/main.scss public/styles/main.css -w"
+  },
+  "author": "Chamtooni",
+  "license": "ISC",
+  "devDependencies": {
+    "scss": "^0.2.4"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1",
+    "node-sass": "^4.13.1",
+    "popper.js": "^1.16.1"
+  }
+}

@@ -1,0 +1,10 @@
+# Specify filepatterns you want git to ignore.
+.idea/
+bootstrap/
+composer.*
+private/images
+ajax/
+vendor/
+node_modules/
+
+

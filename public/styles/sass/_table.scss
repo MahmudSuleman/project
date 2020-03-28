@@ -1,0 +1,36 @@
+.table-box{
+//  width: 70%;
+  font-size: 1.8rem;
+  margin: 0 auto;
+  padding: 1rem;
+
+
+}
+
+
+.table-title{
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  border-bottom: 2px solid #000000;
+  text-align: center;
+}
+
+.timetable{
+
+  &, tr, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  & tr th{
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+  }
+
+  & .monday{
+    background-color: #ccc;
+  }
+}
+
+

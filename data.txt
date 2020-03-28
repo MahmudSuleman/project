@@ -1,0 +1,14 @@
+INSERT INTO timetable (code, title, startTime, endTime, day, hall, lecturer, faculty, trimester, program) VALUES
+  ('gen 101', 'communication skills', '07:00:00', '08:00:00', 2, 'nh2', 'n', 'fms', 1, 'computer science'),
+  ('gen 101', 'communication skills', '09:00:00', '11:00:00', 2, 'nh3', 'n', 'fms', 1, 'computer science'),
+  ('gen 103', 'english language', '07:00:00', '09:00:00', 3, 'nh1', 'n', 'fms', 1, 'computer science'),
+  ('gen 103', 'english language', '14:00:00', '15:00:00', 3, 'nha1', 'n', 'fms', 1, 'computer science'),
+  ('sts 101', 'introductory statistics', '11:00:00', '13:00:00', 3, 'nh1', 'n', 'fms', 1, 'computer science'),
+  ('sts 101', 'introductory statistics', '07:00:00', '08:00:00', 2, 'nh1', 'n', 'fms', 1, 'computer science'),
+  ('csc 103', 'introductory computer 2', '07:00:00', '09:00:00', 4, 'nh2', 'n', 'fms', 1, 'computer science'),
+  ('csc 103', 'introductory computer 2', '13:00:00', '14:00:00', 4, 'nha4', 'n', 'fms', 1, 'computer science'),
+  ('mth 101', 'introductory mathematics', '11:00:00', '12:00:00', 4, 'nha1', 'n', 'fms', 1, 'computer science'),
+  ('mth 101', 'introductory mathematics', '11:00:00', '12:00:00', 5, 'nha1', 'n', 'fms', 1, 'computer science'),
+  ('phy 101', 'introductory physics 1', '16:00:00', '18:00:00', 4, 'nh1', 'n', 'fms', 1, 'computer science'),
+  ('phy 101', 'introductory physics 1', '15:00:00', '16:00:00', 5, 'nh1', 'n', 'fms', 1, 'computer science')
+;

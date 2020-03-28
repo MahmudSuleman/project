@@ -1,0 +1,37 @@
+.top-bar-new{
+  background-color: rgba(0,0,0,0.5);
+  height: 10vh;
+
+}
+.top-bar-new .logo-box{
+  border: 1px solid yellow;
+  border-radius: 5px;
+  padding: 5px;
+  display: inline-block;
+  margin: 10px 0 0 10px;
+}
+
+.search-box{
+  float: right;
+  margin-top: 20px;
+  margin-right: 5px;
+  height: 30px;
+  /*padding: 10px;*/
+  width: 300px;
+
+}
+.search-input, .btn-search{
+  padding: 5px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.search-input:focus{
+  outline:none;
+}
+.content-area{
+  height: 100vh;
+  border: 2px solid #231E16;
+  margin-bottom: 5rem;
+}
+

@@ -1,0 +1,28 @@
+.heading{
+  height: 15vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+
+}
+
+.logo__box{
+  float: left;
+  margin: 20px;
+  border: 1px solid white;
+  /*padding: 10px;*/
+
+}
+
+.logo__box--text{
+  text-align: center;
+  text-transform: uppercase;
+  color:white;
+  padding: 5px;
+}
+
+/*.logo__box*/
+
+.search{
+  float: right;
+  margin-top: 10px;
+}

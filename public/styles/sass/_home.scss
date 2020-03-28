@@ -1,0 +1,102 @@
+.section-main{
+  padding: 1rem;
+  position: relative;
+//  height: 100vh;
+//  overflow: hidden;
+
+}
+
+.section-about{
+  text-align: center;
+  text-transform: uppercase;
+//  height: 50rem;
+
+  &__title{
+//    text-align: center;
+//    border-bottom: 5px solid black;
+    padding: 1rem;
+    margin-top: 4rem;
+
+  }
+
+  &__how-to{
+  text-align: left;
+  border-left: 5px solid black;
+
+    & ol{
+      list-style-position: inside;
+      font-size: 1.6rem;
+//      text-transform: ;
+
+    }
+  }
+
+  &__updates{
+    text-align: left;
+    border-left: 5px solid black;
+  }
+
+
+
+}
+
+.updates-area{
+  height: 90%;
+  background-color: #ccc;
+
+
+}
+
+.logo-box {
+
+  height: 80vh;
+  background-image: linear-gradient(to bottom right, rgba(209, 255, 95, 0.7), rgba(0, 0, 0, 0.61)), url('/public/img/image.jpg');
+  background-size: cover;
+
+  &__items {
+    font-size: 1.6rem;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, .8);
+    text-align: center;
+
+    & .logo-box__text1 {
+      text-transform: uppercase;
+      display: block;
+    }
+
+    & .logo-box__text2 {
+      text-transform: capitalize;
+      display: block;
+    }
+
+  }
+}
+
+
+.how-to{
+  border: 1px solid red;
+  height: 50rem;
+
+}
+
+.credit{
+  border: 1px solid green;
+  height: 50rem;
+}
+
+.section-timetable{
+//  height: 70vh;
+//  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.form-group  select{
+  font-size: 2rem;
+}
+

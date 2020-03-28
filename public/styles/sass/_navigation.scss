@@ -1,0 +1,17 @@
+.side-nav{
+  height: 80%;
+  width: 20%;
+  background-color: $nav-color;
+  padding: 20px;
+
+  &__link{
+    & ul li{
+        list-style-type: none;
+
+
+    }
+  }
+
+
+
+}

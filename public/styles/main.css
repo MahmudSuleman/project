@@ -1,0 +1,239 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 70%; }
+
+body {
+  font-weight: 400;
+  line-height: 1.7;
+  padding: 2rem;
+  box-sizing: border-box;
+  font-size: 1.6rem; }
+
+.admin, .admin:hover {
+  color: white;
+  font-size: 2rem;
+  text-transform: uppercase; }
+
+.heading {
+  height: 15vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative; }
+
+.logo__box {
+  float: left;
+  margin: 20px;
+  border: 1px solid white;
+  /*padding: 10px;*/ }
+
+.logo__box--text {
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  padding: 5px; }
+
+/*.logo__box*/
+.search {
+  float: right;
+  margin-top: 10px; }
+
+.top-bar-new {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 10vh; }
+
+.top-bar-new .logo-box {
+  border: 1px solid yellow;
+  border-radius: 5px;
+  padding: 5px;
+  display: inline-block;
+  margin: 10px 0 0 10px; }
+
+.search-box {
+  float: right;
+  margin-top: 20px;
+  margin-right: 5px;
+  height: 30px;
+  /*padding: 10px;*/
+  width: 300px; }
+
+.search-input, .btn-search {
+  padding: 5px;
+  height: 30px;
+  border-radius: 5px; }
+
+.search-input:focus {
+  outline: none; }
+
+.content-area {
+  height: 100vh;
+  border: 2px solid #231E16;
+  margin-bottom: 5rem; }
+
+.section-main {
+  padding: 1rem;
+  position: relative; }
+
+.section-about {
+  text-align: center;
+  text-transform: uppercase; }
+  .section-about__title {
+    padding: 1rem;
+    margin-top: 4rem; }
+  .section-about__how-to {
+    text-align: left;
+    border-left: 5px solid black; }
+    .section-about__how-to ol {
+      list-style-position: inside;
+      font-size: 1.6rem; }
+  .section-about__updates {
+    text-align: left;
+    border-left: 5px solid black; }
+
+.updates-area {
+  height: 90%;
+  background-color: #ccc; }
+
+.logo-box {
+  height: 80vh;
+  background-image: linear-gradient(to bottom right, rgba(209, 255, 95, 0.7), rgba(0, 0, 0, 0.61)), url("/public/img/image.jpg");
+  background-size: cover; }
+  .logo-box__items {
+    font-size: 1.6rem;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center; }
+    .logo-box__items .logo-box__text1 {
+      text-transform: uppercase;
+      display: block; }
+    .logo-box__items .logo-box__text2 {
+      text-transform: capitalize;
+      display: block; }
+
+.how-to {
+  border: 1px solid red;
+  height: 50rem; }
+
+.credit {
+  border: 1px solid green;
+  height: 50rem; }
+
+.section-timetable {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  margin-top: 10rem;
+  margin-bottom: 10rem; }
+
+.form-group select {
+  font-size: 2rem; }
+
+.btn-m {
+  font-size: 1.6rem; }
+
+.btn-extract {
+  display: inline-block;
+  color: #000000;
+  background-color: white;
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  margin-top: 2rem;
+  text-transform: uppercase; }
+
+.btn-proceed {
+  display: inline-block;
+  padding: 1rem;
+  text-transform: uppercase;
+  border: 1px solid blue;
+  background-color: white; }
+  .btn-proceed:hover {
+    background-color: blue;
+    color: white; }
+
+.btn-table {
+  font-size: 1.6rem;
+  display: block;
+  border: 1px solid black;
+  width: 15rem;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: .5rem; }
+  .btn-table:hover {
+    background-color: #1b1e21;
+    color: white; }
+
+.table-box {
+  font-size: 1.8rem;
+  margin: 0 auto;
+  padding: 1rem; }
+
+.table-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  border-bottom: 2px solid #000000;
+  text-align: center; }
+
+.timetable, .timetable tr, .timetable td, .timetable th {
+  border: 1px solid black;
+  border-collapse: collapse; }
+
+.timetable tr th {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white; }
+
+.timetable .monday {
+  background-color: #ccc; }
+
+.footer {
+  background-color: rgba(35, 30, 22, 0.89);
+  color: white; }
+
+.copyright {
+  text-align: center; }
+
+.credits-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: .5rem;
+  border-bottom: 2px solid white;
+  text-align: center; }
+
+.form-div {
+  height: 80vh;
+  width: 80%;
+  margin: 60px auto;
+  font-size: 1.6rem;
+  padding: 2rem; }
+  .form-div .form-control {
+    line-height: 2rem;
+    font-size: 1.6rem; }
+  .form-div__header {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 1rem 1rem 0 0;
+    color: white;
+    text-transform: uppercase;
+    text-align: center; }
+
+.login-box {
+  margin: 5rem auto;
+  width: 50%;
+  min-height: 30vh;
+  background-color: #ccc;
+  border-radius: 2rem;
+  padding: 1rem;
+  font-size: 1.6rem; }
+  .login-box .title {
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem; }

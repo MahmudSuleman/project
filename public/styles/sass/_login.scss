@@ -1,0 +1,17 @@
+.login-box{
+  margin:5rem auto;
+  width: 50%;
+  min-height:30vh;
+  background-color: #ccc;
+  border-radius: 2rem;
+  padding: 1rem;
+  font-size: $default-font;
+
+  & .title{
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem;
+  }
+
+}
