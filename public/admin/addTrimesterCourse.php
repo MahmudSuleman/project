@@ -54,7 +54,7 @@ if (isset($_POST['submit_course']))
                         <div class="col-sm-6 form-group">
                             <label for="trimester">Trimester</label>
                             <select required class="form-control" name="trimester" id="trimester">
-                                <option value=""></option>
+                                <option disabled selected value="">SELECT TRIMESTER</option>
                                 <option value="1" >1</option>
                                 <option value="2" >2</option>
                             </select>
@@ -62,7 +62,7 @@ if (isset($_POST['submit_course']))
                         <div class="col-sm-6 form-group">
                             <label for="faculty">Faculty</label>
                             <select required class="form-control" name="faculty" id="faculty" >
-                                <option value=""></option>
+                                <option value="">SELECT FACULTY</option>
                                 <option value="FMS" >FMS</option>
                                 <option value="FAS" >FAS</option>
                             </select>
@@ -72,13 +72,13 @@ if (isset($_POST['submit_course']))
                     <div class="row">
                         <div class="col-sm-6 form-group">
                             <label for="program">Program</label>
-                            <select class="form-control" name="program" id="program" onfocus="populate_program('faculty', 'program')">
+                            <select class="form-control" name="program" id="program">
                                 <option ></option>
                             </select>
                         </div>
                         <div class="col-sm-6 form-group">
                             <label for="program_type">Program Type</label>
-                            <select required class="form-control" name="program_type" id="program_type" onfocus="populate_program_type('program', 'program_type')">
+                            <select required class="form-control" name="program_type" id="program_type" >
                                 <option value=""></option>
                             </select>
                         </div>
@@ -87,7 +87,7 @@ if (isset($_POST['submit_course']))
                     <div class="row">
                         <div class="col-sm-6 form-group">
                             <label for="level">Level</label>
-                            <select required class="form-control" name="level" id="level"   onfocus="populate_level('program_type', 'level')">
+                            <select required class="form-control" name="level" id="level">
                                 <option value="" ></option>
                             </select>
                         </div>

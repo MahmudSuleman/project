@@ -20,6 +20,12 @@ body {
   font-size: 2rem;
   text-transform: uppercase; }
 
+.btn {
+  font-size: 1.6rem; }
+
+#search {
+  font-size: 1.1rem; }
+
 .heading {
   height: 15vh;
   background-color: rgba(0, 0, 0, 0.5);
@@ -126,6 +132,8 @@ body {
   height: 50rem; }
 
 .section-timetable {
+  width: 70%;
+  margin: 0 auto;
   text-transform: uppercase;
   font-size: 1.6rem;
   margin-top: 10rem;
@@ -237,3 +245,25 @@ body {
     text-align: center;
     text-transform: uppercase;
     padding: 1rem; }
+
+.side-nav {
+  height: 80%;
+  width: 20%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px; }
+  .side-nav__link ul li {
+    list-style-type: none; }
+
+.dropdown-menu {
+  font-size: 1.6rem;
+  font-style: italic; }
+
+.profile-box {
+  width: 70%;
+  margin: 15rem auto;
+  border: 1px solid black;
+  padding: 2rem;
+  border-radius: 2rem; }
+  .profile-box__title {
+    text-transform: uppercase;
+    text-align: center; }

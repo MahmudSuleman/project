@@ -1,74 +1,74 @@
-function populate_program(s1, s2){
-    var s1 = document.getElementById(s1);
-    var s2 = document.getElementById(s2);
-
-    s2.innerHTML = '';
-
-    if(s1.value == 'FMS'){
-        var optionsArray = [
-            '|',
-            'ACTUARIAL SCIENCE|ACTUARIAL SCIENCE',
-            'COMPUTER SCIENCE|COMPUTER SCIENCE',
-            'FINANCIAL MATHEMATICS|FINANCIAL MATHEMATICS',
-            'PURE MATHEMATICS|PURE MATHEMATICS',
-            'STATISTICS|STATISTICS',
-            'MATHEMATICS WITH ECONOMICS|MATHEMATICS WITH ECONOMICS',
-            'COMPUTING WITH ACCOUNTING|COMPUTING WITH ACCOUNTING'
-        ];
+var faculty = document.getElementById("faculty");
+var program = document.getElementById("program");
+var program_type = document.getElementById("program_type");
+var level = document.getElementById("level");
 
 
-    }
 
-    for(var option in optionsArray){
-        var pair = optionsArray[option].split('|');
-        var newOption = document.createElement('option');
-        newOption.value = pair[0];
-        newOption.innerHTML = pair[1];
-        s2.options.add(newOption);
-    }
+function populate_program()
+{
+
+    var query = "SELECT DISTINCT program FROM category WHERE faculty = '"+faculty.value +"'";
+    var xhr = new XMLHttpRequest();
+    xhr.open("get", "category_data.php?type=program&q=" + query, true);
+
+    xhr.onreadystatechange = function()
+    {
+        if(xhr.readyState == 4 && xhr.status == 200)
+        {
+            var data = xhr.responseText;
+            program.innerHTML = data;
+        }
+
+    };
+
+    xhr.send();
+}
+
+function populate_program_type()
+{
+
+    var query = "SELECT DISTINCT program_type FROM category WHERE program = '"+program.value +"'";
+    var xhr = new XMLHttpRequest();
+    xhr.open("get", "category_data.php?type=program_type&q=" + query, true);
+
+    xhr.onreadystatechange = function()
+    {
+        if(xhr.readyState == 4 && xhr.status == 200)
+        {
+            var data = xhr.responseText;
+            program_type.innerHTML = data;
+        }
+
+    };
+
+    xhr.send();
 }
 
 
-function populate_program_type(s1, s2){
-    var s1 = document.getElementById(s1);
-    var s2 = document.getElementById(s2);
+function populate_level()
+{
 
-    s2.innerHTML = '';
+    var query = "SELECT DISTINCT level FROM category WHERE program_type = '"+program_type.value +"'";
+    var xhr = new XMLHttpRequest();
+    xhr.open("get", "category_data.php?type=level&q=" + query, true);
 
-    if(s1.value == 'computer science' || s1.value == 'statistics' ){
-        var optionsArray = ['|', 'degree|Degree', 'diploma|Diploma'];
-    }else if(s1.value != 'computer science' || s1.value != 'statistics' ) {
-        var optionsArray = ['|','degree|Degree']
-    }
+    xhr.onreadystatechange = function()
+    {
+        if(xhr.readyState == 4 && xhr.status == 200)
+        {
+            var data = xhr.responseText;
+            level.innerHTML = data;
+        }
 
-    for(var option in optionsArray){
-        var pair = optionsArray[option].split('|');
-        var newOption = document.createElement('option');
-        newOption.value = pair[0];
-        newOption.innerHTML = pair[1];
-        s2.options.add(newOption);
-    }
+    };
+
+    xhr.send();
 }
 
 
+faculty.addEventListener("change",populate_program);
+program.addEventListener("change", populate_program_type);
+program_type.addEventListener("change", populate_level);
 
-function populate_level(s1, s2){
-    var s1 = document.getElementById(s1);
-    var s2 = document.getElementById(s2);
-
-    s2.innerHTML = '';
-
-    if(s1.value == 'degree'){
-        var optionsArray = ['|','100|100', '200|200', '300|300', '400|400'];
-    }else{
-        var optionsArray = ['|','100|100', '200|200'];
-    }
-
-    for(var option in optionsArray){
-        var pair = optionsArray[option].split('|');
-        var newOption = document.createElement('option');
-        newOption.value = pair[0];
-        newOption.innerHTML = pair[1];
-        s2.options.add(newOption);
-    }
-}
+console.log("hello");

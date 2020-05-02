@@ -10,6 +10,8 @@ require_once SHARED_PATH.'/admin_nav.php';
 <section class="content-area">
 
     <div class="table-area" id="live-search" style="height: 100vh; overflow-y: scroll">
+        <p>Search for a course</p>
+
     </div>
 </section>
 
@@ -20,7 +22,7 @@ require_once SHARED_PATH.'/admin_nav.php';
         var index = document.getElementById('index').value;
 
         if (str.length == 0) {
-            document.getElementById('live-search').innerHTML = 'no suggestions';
+            document.getElementById('live-search').innerHTML = 'Search for a course';
             return;
         }
         var xhr = '';

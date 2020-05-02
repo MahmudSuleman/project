@@ -12,16 +12,17 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="addTrimesterCourse.php">Trimester Course</a>
-                    <a class="dropdown-item" href="addCourse.php">Timetable Course</a>
+                    <a class="dropdown-item" href="addTimetableCourse.php">Timetable Course</a>
                 </div>
             </li>
+
         </ul>
         <form class="form-inline my-2 my-lg-0" method="get" action="index.php?">
-            <select name="index" id="index" onchange="result()" >
+            <select name="index" id="index"  onchange="result()">
                 <option value="courses">Course</option>
                 <option value="timetable">Timetable</option>
             </select>
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="search" id="search" onkeyup="result()">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="search" id="search" onkeyup="result()" onfocus="result()">
         </form>
 
 
@@ -31,7 +32,8 @@
             <?php echo 'Hi, '. $_SESSION['username'].'!'; ?>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="logout.php">Logout</a>
+            <a class="dropdown-item" href="<?php echo url_for("admin/profile.php"); ?>">Profile</a>
+            <a class="dropdown-item" href="<?php echo url_for("admin/logout.php"); ?>">Logout</a>
         </div>
     </li>
 </nav>

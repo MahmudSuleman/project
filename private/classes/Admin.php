@@ -8,8 +8,8 @@
 
 class Admin{
 
-    public $level;
     public $email;
+    public $level;
     public $username;
     private $password;
 
@@ -35,9 +35,9 @@ class Admin{
         try
         {
 //       get connected to the database and do the selection of the user
-            $con = Database::connect();
+            global $db;
             $sql = "SELECT * FROM admins WHERE username = '" . $username . "'";
-            $result = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+            $result = $db->pdoQuery($sql)->result();
 
         }
         catch (Exception $e)
@@ -47,7 +47,7 @@ class Admin{
         }
         if (!empty($result))
         {
-            return $result[0];
+            return $result;
         }
     }
 
@@ -75,25 +75,20 @@ class Admin{
 
     public function  addAdmin(){
         try {
-            $con = Database::connect();
-            $sql =  "INSERT INTO admins (username, email, password, level) VALUES (:username,:email,:password, :level)";
-            $stm = $con->prepare($sql);
-            $stm->execute([
-                ':username' => $this->username,
-                ':email' => $this->email,
-                ':password' => $this->password,
-                ':level' => $this->level
 
-            ]);
+            $sql =  "INSERT INTO admins (username, email, password, level)
+                      VALUES (?,?,?, ?)";
+            $data = [$this->username, $this->email, $this->password, $this->level];
+            global $db;
+            $db->pdoQuery($sql,$data);
 
-
-            $error = $con->errorInfo();
+            $error = $db->errorInfo();
             if(!empty($error)){
                 echo $error[2];
             }
 
         } catch (Exception $e) {
-
+            print_r($e->getMessage());
         }
     }
 

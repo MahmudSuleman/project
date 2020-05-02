@@ -48,7 +48,7 @@ require_once SHARED_PATH . '/admin_header.php';
                     <li>click on proceed</li>
                     <li>choose the courses you have registered</li>
                     <li>click on proceed</li>
-                    <li>there you go, you save as pdf or print</li>
+                    <li>there you go, you can save your timetable as pdf or print</li>
                 </ol>
             </div>
             <div class="col section-about__updates">
@@ -85,9 +85,10 @@ require_once SHARED_PATH . '/admin_header.php';
                 <div class="col">
                     <div class="form-group">
                         <label for="faculty">faculty</label>
-                        <select required name="fac" id="faculty" class="form-control" onchange="populate_program(this.id, 'program')">
-                            <option value="#">select faculty</option>
-                            <option value="fms">fms</option>
+                        <select required name="fac" id="faculty" class="form-control">
+                            <option value="#">SELECT FACULTY</option>
+                            <option value="FMS">FMS</option>
+                            <option value="FAS">FAS</option>
                         </select>
                     </div>
                 </div>
@@ -96,7 +97,7 @@ require_once SHARED_PATH . '/admin_header.php';
                 <div class="col">
                     <div class="form-group">
                         <label for="program">program</label>
-                        <select required name="prog" id="program" class="form-control" onchange="populate_program_type(this.id, 'program_type')">
+                        <select required name="prog" id="program" class="form-control">
                         </select>
                     </div>
                 </div>
@@ -106,7 +107,7 @@ require_once SHARED_PATH . '/admin_header.php';
                 <div class="col">
                     <div class="form-group">
                         <label for="program_type">Program type</label>
-                        <select required name="prog_type" id="program_type" class="form-control" onchange="populate_level(this.id, 'level')" ></select>
+                        <select required name="prog_type" id="program_type" class="form-control"></select>
                     </div>
                 </div>
 
@@ -118,12 +119,13 @@ require_once SHARED_PATH . '/admin_header.php';
                     </div>
                 </div>
             </div>
-            <button name="submit" type="submit" class="btn btn-proceed btn-block">proceed</button>
+            <button id="btn" name="submit" type="submit" class="btn btn-proceed btn-block">proceed</button>
         </form>
+
+        <div id="main"></div>
 
     </section>
 
 </div>
 <?php
 include_once SHARED_PATH . '/footer.php';?>
-

@@ -28,7 +28,15 @@ function url_for($script_path){
     return WWW_ROOT.$script_path;
 }
 
-//require_once('functions.php');
+function u($string=""){return urlencode($string);}
+
+function raw_u($string=""){return rawurlwncode($string);}
+
+function h($string=""){return htmlspecialchars($string);}
+
+function redirect_to($location){
+    return header('Location: '.$location);
+}
 
 
 //include_once 'classes/User.php';
@@ -41,5 +49,15 @@ spl_autoload_register('classes');
 $errors = [];
 
 $current_trimester = 2;
+
+$dsn = [
+    "host"=>"localhost",
+    "username"=>"root",
+    "password"=>"",
+    "dbname"=>"project"
+
+];
+$pdoHelper = new PDOHelper($dsn);
+$db = new PdoWrapper($dsn);
 
 

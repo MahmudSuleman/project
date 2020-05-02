@@ -23,17 +23,4 @@ if(!isset($title)){$title = "Homepage";}
 </head>
 <body>
 
-<header class="header">
-<!--    <div class="logo-box">-->
-<!--        <h1>logo</h1>-->
-<!--    </div>-->
-
-    <div id="menu-item">
-        <ul>
-            <li><a href="<?php echo url_for("user/homepage.php")?>">Main Menu</a></li>
-        </ul>
-    </div>
-</header>
-
-
 
