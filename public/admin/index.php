@@ -16,6 +16,12 @@ require_once SHARED_PATH.'/admin_nav.php';
 </section>
 
 
+
+
+<?php
+require_once SHARED_PATH.'/footer_nav.php';
+require_once SHARED_PATH.'/footer.php';?>
+
 <script>
     function result() {
         var str = document.getElementById('search').value;
@@ -27,12 +33,12 @@ require_once SHARED_PATH.'/admin_nav.php';
         }
         var xhr = '';
         if(window.XMLHttpRequest){
-             xhr = new XMLHttpRequest();
+            xhr = new XMLHttpRequest();
 
         }else{
-             xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
         }
-        xhr.open("get", "./search.php?q=" + str + "&index=" + index, true);
+        xhr.open("get", "search.php?q=" + str + "&index=" + index, true);
 
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4 && xhr.status == 200) {
@@ -41,6 +47,13 @@ require_once SHARED_PATH.'/admin_nav.php';
         };
         xhr.send();
     }
-</script>
 
-<?php require_once SHARED_PATH.'/footer.php';
+
+    $(document).ready(function(){
+
+        $('a').click(function(){
+            e.preventDefault();
+            alert('clicked');
+        })
+    })
+</script>

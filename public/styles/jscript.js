@@ -67,8 +67,8 @@ function populate_level()
 }
 
 
+
+
 faculty.addEventListener("change",populate_program);
 program.addEventListener("change", populate_program_type);
 program_type.addEventListener("change", populate_level);
-
-console.log("hello");

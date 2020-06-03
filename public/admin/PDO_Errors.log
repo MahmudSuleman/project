@@ -1,0 +1,18 @@
+2020-04-29 02:04:57 :: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'username, password VALUES ('chamtooni','$2y$10$Y2vMDM8/9j9Fyd0cHzfns.jJDpazXIVM0' at line 1: 405
+2020-04-29 02:04:39 :: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'chamtooni' for key 'username': 405
+2020-05-02 03:05:14 :: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'desc) VALUES  (2020-05-02  03:15:14 , mudi, changed csc 315 trimester from 1 to ' at line 1: 352
+2020-05-02 03:05:57 :: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'desc) VALUES  (2020-05-02  03:15:56 , mudi, changed csc 315 trimester from 1 to ' at line 1: 352
+2020-05-02 03:05:00 :: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'desc) VALUES  ('2020-05-02  03:18:00 ' , 'mudi', 'changed csc 315 trimester from' at line 1: 352
+2020-05-02 03:05:37 :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'destail' in 'field list': 352
+2020-05-02 03:05:07 :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'destail' in 'field list': 352
+2020-05-02 03:05:35 :: SQLSTATE[HY000]: General error: 352
+2020-05-02 03:05:50 :: SQLSTATE[HY000]: General error: 352
+2020-05-02 03:05:53 :: SQLSTATE[HY000]: General error: 352
+2020-05-02 03:05:55 :: SQLSTATE[HY000]: General error: 352
+2020-05-03 06:05:19 :: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '06:05 pm, mudi, venue changed to spanish lab audio visual)' at line 1: 352
+2020-05-03 06:05:27 :: SQLSTATE[HY000]: General error: 352
+2020-05-03 06:05:43 :: SQLSTATE[HY000]: General error: 352
+2020-05-03 06:05:04 :: SQLSTATE[HY000]: General error: 352
+2020-05-03 06:05:49 :: SQLSTATE[HY000]: General error: 352
+2020-06-03 08:06:42 :: Not a valid where condition..
+2020-06-03 08:06:01 :: Not a valid where condition..

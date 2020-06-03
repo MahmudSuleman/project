@@ -27,6 +27,9 @@ function url_for($script_path){
     }
     return WWW_ROOT.$script_path;
 }
+//
+//echo $public_end;
+//die();
 
 function u($string=""){return urlencode($string);}
 
@@ -59,5 +62,6 @@ $dsn = [
 ];
 $pdoHelper = new PDOHelper($dsn);
 $db = new PdoWrapper($dsn);
+
 
 

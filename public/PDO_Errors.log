@@ -1,0 +1,8 @@
+2020-04-28 07:04:31 :: invalid operation called in query. use only SELECT, INSERT, UPDATE, DELETE
+2020-04-28 08:04:15 :: invalid operation called in query. use only SELECT, INSERT, UPDATE, DELETE
+2020-04-28 08:04:58 :: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE faculty  = 'fms'' at line 1: 352
+2020-04-28 08:04:17 :: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE faculty  = 'fms'' at line 1: 352
+2020-04-29 12:04:37 :: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'unique(program) FROM category WHERE faculty = 'fms'' at line 1: 352
+2020-04-29 12:04:01 :: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'unique program FROM category WHERE faculty = 'fms'' at line 1: 352
+2020-05-02 02:05:32 :: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''' at line 1: 352
+2020-05-08 08:05:53 :: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''' at line 1: 352

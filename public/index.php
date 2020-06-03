@@ -9,6 +9,21 @@
 require_once '../private/init.php';
 $title = 'Homepage';
 require_once SHARED_PATH . '/admin_header.php';
+global $db;
+$sql = "SELECT * FROM project.updates ORDER BY  daytime DESC LIMIT 5";
+$updates = $db->pdoQuery($sql)->aResults;
+if(isset($_POST['send'])){
+    global $db;
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+    $result = $db->insert("contacts", ['email'=>$email, 'message'=>$message]);
+
+    if($result)
+        echo "<script>alert('Message sent! Thanks for your contribution...')</script>";
+
+
+}
+// todo implement the messages functionality fro the admin
 ?>
 
 
@@ -54,23 +69,30 @@ require_once SHARED_PATH . '/admin_header.php';
             <div class="col section-about__updates">
                 <h2>last updated</h2>
 
-                <div class="updates-area">
+                <div class="updates-area" style="overflow-y: scroll">
+                    <?php if(!empty($update)){
+                        foreach ($updates as $update) {?>
                     <h3>
-                        <table>
+                        <table style="margin-bottom: 20px; background-color: #fffcc8">
                             <tr>
                                 <td>author:</td>
-                                <td>Mahmud</td>
+                                <td><?php echo $update['author'] ?></td>
+                            </tr>
+                            <tr>
+                                <td>Course:</td>
+                                <td><?php echo $update['course'] ?></td>
                             </tr>
                             <tr>
                                 <td>description:</td>
-                                <td>changed csc 102 to csc 104</td>
+                                <td><?php echo $update['detail'] ?></td>
                             </tr>
                             <tr>
                                 <td>time:</td>
-                                <td>12/12/2020 @ 01:20PM</td>
+                                <td><?php echo $update['daytime'] ?></td>
                             </tr>
                         </table>
                     </h3>
+                    <?php }} else{echo "NO UPDATES AVAILABLE...";} ?>
                 </div>
 
             </div>
@@ -128,4 +150,5 @@ require_once SHARED_PATH . '/admin_header.php';
 
 </div>
 <?php
+include_once SHARED_PATH . '/footer_nav.php';
 include_once SHARED_PATH . '/footer.php';?>

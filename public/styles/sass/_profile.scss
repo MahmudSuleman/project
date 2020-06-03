@@ -1,0 +1,12 @@
+.profile-box{
+  width: 70%;
+  margin: 15rem auto;
+  border: 1px solid black;
+  padding: 2rem;
+  border-radius: 2rem;
+
+  &__title{
+    text-transform: uppercase;
+    text-align: center;
+  }
+}

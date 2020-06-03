@@ -6,14 +6,20 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Add New Course
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="addTrimesterCourse.php">Trimester Course</a>
-                    <a class="dropdown-item" href="addTimetableCourse.php">Timetable Course</a>
-                </div>
+<!--            <li class="nav-item dropdown">-->
+<!--                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--                    Add New Course-->
+<!--                </a>-->
+<!--                <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+<!--                    <a class="dropdown-item" href="addTrimesterCourse.php">Trimester Course</a>-->
+<!--                    <a class="dropdown-item" href="addTimetableCourse.php">Timetable Course</a>-->
+<!--                </div>-->
+<!--            </li>-->
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo url_for('admin/addTrimesterCourse.php'); ?>">Add Trimester Course</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo url_for('admin/addTimetableCourse.php'); ?>"> Add Timetable Course</a>
             </li>
 
         </ul>

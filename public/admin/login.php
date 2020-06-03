@@ -37,7 +37,7 @@ if(isset($_POST['submit'])){
 
             <div class="form-group">
                 <label for="password">Password</label>
-                <input class="form-control" id="password" type="text" name="password"/>
+                <input class="form-control" id="password" type="password" name="password"/>
             </div>
 
             <div class="form-group">

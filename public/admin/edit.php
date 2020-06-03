@@ -26,8 +26,15 @@ if(isset($_POST['submit_timetable'])){
     $args['trimester'] = $_POST['trimester'];
     $args['program'] = $_POST['program'];
 
+    $update = $_POST['updates'];
+    $daytime = date("Y-m-d h:m a");
+    $author = $_SESSION['username'];
+    $course = $_POST['code'];
+
+    global $db;
+    $db->insert("updates", ["author"=>$author, "detail"=>$update, "course"=> $course]);
     $data = new TimeTable($args);
-    if($data->updateCourse()){header('location: index.php');}
+    if($data->updateCourse() ){header('location: index.php');}else{echo 'failed'; die();}
 
 }else if(isset($_POST['submit_course'])){
 //    die('clicked');
@@ -123,6 +130,13 @@ if(isset($_POST['submit_timetable'])){
                         <select name="program" id="program" class="form-control"  onfocus="populate_program('faculty', this.id)">
                             <option value="<?= $get_course['program']; ?>"><?= $get_course['program']; ?></option>
                         </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6 off-set-3">
+                        <label for="updates">What has changed?</label>
+                        <textarea name="updates" id="updates" cols="100" rows="5" required></textarea>
                     </div>
                 </div>
                 <button class="btn btn-primary btn-m" name="submit_timetable" type="submit">Update</button>

@@ -9,7 +9,7 @@
 class TimeTable {
     //todo Add the school field in case it would be extended to other schools
     public $code;
-    public $title;
+//    public $title;
     public $startTime;
     public $endTime;
     public $day;
@@ -23,7 +23,7 @@ class TimeTable {
 
     public function __construct($arg=[]){
     $this->code = isset($arg['code']) ? $arg['code'] : '';
-    $this->title = isset($arg['title']) ? $arg['title'] : '';
+//    $this->title = isset($arg['title']) ? $arg['title'] : '';
     $this->startTime = isset($arg['startTime']) ? $arg['startTime'] : '';
     $this->endTime = isset($arg['endTime']) ? $arg['endTime'] : '';
     $this->day = isset($arg['day']) ? $arg['day'] : '';
@@ -57,23 +57,25 @@ class TimeTable {
 
 
 
+
+
     public  function addCourse()
     {
         try
         {
             //        Create connection to the database
             $con = Database::connect();
-            $sql = "INSERT INTO timetable (code, title, startTime, endTime, day, hall, lecturer, faculty, trimester, program)
-                VALUES (:courseCode, :courseTitle, :startTime, :endTime, :day, :lectureHall,
-                                                      :lecturer, :faculty, :trimester, :program);";
+            $sql = "INSERT INTO timetable (code, startTime, endTime, day, hall, faculty, trimester, program)
+                VALUES (:courseCode,  :startTime, :endTime, :day, :lectureHall
+                                                      , :faculty, :trimester, :program);";
             $stm = $con->prepare($sql);
             $stm->bindValue(":courseCode", $this->code);
-            $stm->bindValue(":courseTitle", $this->title);
+//            $stm->bindValue(":courseTitle", $this->title);
             $stm->bindValue(":startTime", $this->startTime);
             $stm->bindValue(":endTime", $this->endTime);
             $stm->bindParam(":day", $this->day, PDO::PARAM_INT);
             $stm->bindValue(":lectureHall", $this->hall);
-            $stm->bindValue(":lecturer", $this->lecturer);
+//            $stm->bindValue(":lecturer", $this->lecturer);
             $stm->bindValue(":faculty", $this->faculty);
             $stm->bindValue(":program", $this->program);
 //            $stm->bindValue(":year", $this->year);
@@ -150,7 +152,7 @@ class TimeTable {
             $result = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 
             $sql = "Select timetable.code, time_format(timetable.startTime, '%h:%i %p') startTime, time_format(timetable.endTime, '%h:%i %p') endTime, timetable.day, timetable.hall, timetable.faculty, courses.title
-                    from timetable INNER JOIN cpurses ON timetable.code = courses.code WHERE  code in(";
+                    from timetable INNER JOIN courses ON timetable.code = courses.code WHERE  code in(";
             foreach($result as $code){
                 $sql .=  "'".$code['code']. "',";
             }
@@ -169,38 +171,6 @@ class TimeTable {
         }
 
    }
-
-//        public static  function timetable($username)
-//    {
-//
-//        try{
-//            $con = Database::connect();
-//            $sql = "SELECT code FROM registration WHERE username = '". $username . "'";
-//            $result = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
-//
-//            $sql = "Select code, time_format(startTime, '%h:%i %p') startTime, time_format(endTime, '%h:%i %p') endTime, day, hall, faculty from timetable WHERE  code in(";
-//            foreach($result as $code){
-//                $sql .=  "'".$code['code']. "',";
-//            }
-//            $sql .= ") ORDER BY day asc";
-//
-//            $sql = str_replace(",)", ")", $sql);
-//            $result = $con->query($sql);
-//            if(!empty($result)) {
-//                $result = $result->fetchAll(PDO::FETCH_ASSOC);
-//            }
-//        }catch (Exception $e){
-//            print_r($e->getMessage());
-//        }
-//        if(!empty($result)){
-//            return $result;
-//        }
-//
-//    }
-
-
-
-
 
 }
 
